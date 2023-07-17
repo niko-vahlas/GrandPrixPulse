@@ -1,4 +1,4 @@
-## Proposal
+# Proposal
 
 ### Project Descrption
 The goal of the project is to create a database that contains historical information pertaining to **Formula 1** such as:
