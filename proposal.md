@@ -1,7 +1,7 @@
 ## Proposal
 
 ### Project descrption
-- The goal of the project is to create a database that contains information pertaining to **formula 1** such as:
+- The goal of the project is to create a database that contains information pertaining to **Formula 1** such as:
   - points scored by drivers
   - best lap times set by drivers at various circuits
 
