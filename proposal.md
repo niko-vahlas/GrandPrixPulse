@@ -9,3 +9,4 @@
   - Drivers and team principles as an entity of team
   - Car as an entity of team where the model is an attribute
   - The relationship between drivers and circuits
+  - deez nuts (cannot be implemented due to database size limitations)
