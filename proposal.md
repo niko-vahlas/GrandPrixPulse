@@ -6,4 +6,6 @@
   - best lap times set by drivers at various circuits
 
 - The database is going to model:
-  - The relationship between drivers and team principles as an entity of team
+  - Drivers and team principles as an entity of team
+  - Car as an entity of team where the model is an attribute
+  - The relationship between drivers and circuits
