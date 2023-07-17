@@ -26,4 +26,5 @@ We will use PHP (probably) and something for the front end ?????
 
 ### ER Diagram
 
-![image](https://media.github.students.cs.ubc.ca/user/20701/files/55e4a288-d061-42e6-805d-b376df2e9ccd)
+![image](https://media.github.students.cs.ubc.ca/user/20701/files/9e1b7af9-15ef-4026-a887-e010950f8bec)
+
