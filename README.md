@@ -1,5 +1,5 @@
 # Proposal
-Hello world
+
 ### Project Description
 The goal of the project is to create a database that contains historical information pertaining to **Formula 1** such as:
 - Drivers, team principal, and points scored by different teams every year
@@ -13,7 +13,9 @@ The database is going to model:
 
 ### Database Specifications
 Benefits of the database: 
-- Overview of historical team and driver performance
+- Overview of historical team data
+- Compare and review past driver, car, and team performance
+- View fastest lap records at all F1 circuits
 
 Functionality: 
 - Look up team members, sponsors, car model, and team performance by year and team
