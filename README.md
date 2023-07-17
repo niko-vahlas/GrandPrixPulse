@@ -22,7 +22,7 @@ Functionality:
 - Look up most recent lap records of different Formula 1 circuits
 
 ### Description of Application Platform
-We will use PHP (probably) and something for the front end ?????
+We will use PHP (probably) and HTML/CSS
 
 ### ER Diagram
 
