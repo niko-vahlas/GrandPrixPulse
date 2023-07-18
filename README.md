@@ -7,9 +7,10 @@ The goal of the project is to create a database that contains historical informa
 
 The database is going to model:
 - Drivers, team principal, sponsors, and car model as entities related to a team
+- Points scored by drivers and teams every year
+- Engine manufacturer for different model cars (different cars from different teams sometimes share the same engine)
 - Unique team entities differentiated by year
-- The relationship between drivers and circuits lap records
-- deez nuts (cannot be implemented due to database size limitations)
+- The relationship between drivers and lap records on different circuits
 
 ### Database Specifications
 Benefits of the database: 
@@ -22,7 +23,7 @@ Functionality:
 - Look up most recent lap records of different Formula 1 circuits
 
 ### Description of Application Platform
-We will use PHP/MySQL for backend and HTML/CSS for frontend
+We will use PHP/MySQL for backend and HTML/CSS for frontend. 
 
 ### ER Diagram
 
