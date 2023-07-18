@@ -26,5 +26,4 @@ We will use PHP/MySQL for backend and HTML/CSS for frontend
 
 ### ER Diagram
 
-![image](https://media.github.students.cs.ubc.ca/user/20701/files/9e1b7af9-15ef-4026-a887-e010950f8bec)
-
+![image](https://media.github.students.cs.ubc.ca/user/20701/files/7f493af6-17bb-41c5-8594-a44bb80ed16f)
