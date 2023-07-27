@@ -1,34 +1,34 @@
 Team(
 
-Points int, 
+  Points int, 
 
-Name char(100), 
+  <ins>Name</ins> char(100), 
 
-Year int, 
+  <ins>Year</ins> int, 
 
-Team\_program char(100), 
+  Team\_program char(100), 
 
-**Season\_year** int NOT NULL, 
+  ***Season\_year*** int NOT NULL, 
 
-**Model** char(50) NOT NULL,
+  ***Model*** char(50) NOT NULL,
 
-**Principal\_name** char(50) NOT NULL
+  ***Principal\_name*** char(50) NOT NULL
 
 )
 
 Season(
 
-Year int, 
+<ins>Year</ins> int, 
 
-**Champion\_name** char(100) NOT NULL
+***Champion\_name*** char(100) NOT NULL
 
 )
 
 Race(
 
-Circuit char(200), 
+<ins>Circuit</ins> char(200), 
 
-**Year** int, 
+<ins>***Year***</ins> int, 
 
 Fastest\_lap real, 
 
@@ -46,13 +46,13 @@ QP3 char(100),
 
 Country char(100), 
 
-**Safety\_model** char(50)
+***Safety\_model*** char(50)
 
 )
 
 Safety\_car(
 
-Model char(50), 
+<ins>Model</ins> char(50), 
 
 Manufacturer char(100)
 
@@ -60,13 +60,13 @@ Manufacturer char(100)
 
 Car(
 
-Model char(50)
+<ins>Model</ins> char(50)
 
 )
 
 Engine Manufacturer(
 
-Model char(50), 
+<ins>Model</ins> char(50), 
 
 Company\_name char(100)
 
@@ -74,21 +74,21 @@ Company\_name char(100)
 
 Uses\_engine(
 
-**Car\_model** char(50), 
+<ins>***Car\_model***</ins> char(50), 
 
-**Engine\_model** char(50)
+<ins>***Engine\_model***</ins> char(50)
 
 )
 
 Principal(
 
-Name char(100)
+<ins>Name</ins> char(100)
 
 )
 
 Driver(
 
-Name char(100), 
+<ins>Name</ins> char(100), 
 
 Career\_points int, 
 
@@ -98,27 +98,27 @@ Career\_wins int
 
 Drives\_for(
 
-**Driver\_name** char(100), 
+<ins>***Driver\_name***</ins> char(100), 
 
-**Team\_name** char(100), 
+<ins>***Team\_name***</ins> char(100), 
 
-**Team\_year** int
+<ins>***Team\_year***</ins> int
 
 )
 
 Sponsor(
 
-Name char(100), 
+<ins>Name</ins> char(100), 
 
 )
 
 Pays\_for(
 
-**Team\_name** char(100), 
+<ins>***Team\_name***</ins> char(100), 
 
-**Team\_year** int
+<ins>***Team\_year***</ins> int
 
-**Sponsor\_name** char(100)
+<ins>***Sponsor\_name***</ins> char(100)
 
 )
 
@@ -128,9 +128,9 @@ Time real,
 
 Year int, 
 
-Circuit\_name char(200)
+<ins>Circuit\_name</ins> char(200)
 
-**Driver\_name** char(100) NOT NULL
+***Driver\_name*** char(100) NOT NULL
 
 )
 
