@@ -1,5 +1,5 @@
 CREATE TABLE Engine_Manufacturer (
-	engine_model CHAR(50) PRIMARY KEY,
+	model CHAR(50) PRIMARY KEY,
 	company_name CHAR(100)
 );
 
@@ -25,6 +25,10 @@ CREATE TABLE Driver (
 	career_wins INTEGER
 );
 
+CREATE TABLE Season (
+	year INTEGER
+);
+
 CREATE TABLE Team1 (
 	name CHAR(50), 
 	year INTEGER, 
@@ -32,8 +36,8 @@ CREATE TABLE Team1 (
 	car_model CHAR(50) NOT NULL, 
 	principal_name CHAR(50) NOT NULL, 
 	PRIMARY KEY (name, year), 
-	FOREIGN KEY (principal) REFERENCES Principal(name) ON DELETE CASCADE ON UPDATE CASCADE,
-	FOREIGN KEY (car_model) REFERENCES Car(model) ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY (principal_name) REFERENCES Principal(name) ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY (car_model) REFERENCES Car(model) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Team2 (
@@ -53,13 +57,13 @@ CREATE TABLE Drives_For (
 	year INTEGER,
 	PRIMARY KEY (driver_name, team_name, year),
 	FOREIGN KEY (driver_name) REFERENCES Driver(name) ON DELETE CASCADE ON UPDATE CASCADE,
-	FOREIGN KEY (team_name, year) REFERENCES Team(name, year) ON DELETE CASCADE ON UPDATE CASCADE
+	FOREIGN KEY (team_name, year) REFERENCES Team1(name, year) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Season_Champion (
 	year INTEGER PRIMARY KEY,
 	driver_name CHAR(50) NOT NULL,
-	FOREIGN KEY (driver_name) REFERENCES Driver(name) ON DELETE CASCADE ON UPDATE CASCADE)
+	FOREIGN KEY (driver_name) REFERENCES Driver(name) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Sponsor (
@@ -71,12 +75,8 @@ CREATE TABLE Pays_For (
 	team_year INTEGER,
 	sponsor_name CHAR(50),
 	PRIMARY KEY (team_name, year, sponsor_name),
-	FOREIGN KEY (team_name, year) REFERENCES Team(name, year) ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY (team_name, year) REFERENCES Team1(name, year) ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY (sponsor_name) REFERENCES Sponsor(name) ON DELETE CASCADE ON UPDATE CASCADE
-);
-
-CREATE TABLE Season (
-	year INTEGER
 );
 
 CREATE TABLE Race1 (
@@ -91,7 +91,7 @@ CREATE TABLE Race1 (
 	year INTEGER,
 	safety_car_model CHAR(50),
 	PRIMARY KEY (year, circuit),
-	FORIEGN KEY (year) REFERENCES Season(year) ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY (year) REFERENCES Season(year) ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY (safety_car_model) REFERENCES Saftey_Car(model) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
