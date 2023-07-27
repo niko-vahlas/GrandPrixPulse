@@ -8,7 +8,7 @@ CREATE TABLE Car (
 );
 
 CREATE TABLE Car_Engine (
-	engine_model CHAR(50) NOT NULL,
+	engine_model CHAR(50),
 	car_model CHAR(50),
 	PRIMARY KEY (engine_model, car_model),
 	FOREIGN KEY (engine_model) REFERENCES Engine_Manufacturer(engine_model) ON DELETE CASCADE ON UPDATE CASCADE,
