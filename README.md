@@ -33,7 +33,7 @@ Functionality:
 
 ### Description of Application Platform
 
-We will use PHP/MySQL for backend and HTML/CSS for frontend.
+We will use PHP/MySQL for the backend and HTML/CSS for the frontend.
 
 ### ER Diagram
 
