@@ -26,16 +26,17 @@ CREATE TABLE Driver (
 );
 
 CREATE TABLE Team (
-	principle_name CHAR(50) NOT NULL,
-	car_model CHAR(50) NOT NULL,
-	team_name CHAR(50),
-	year YEAR ON DELETE CASCADE,
-	season_year YEAR,
-	points INTEGER,
-	PRIMARY KEY (team_name, year),
-	FOREIGN KEY (principle) REFERENCES Principle(name) ON DELETE CASCADE ON UPDATE CASCADE,
+	name CHAR(50), 
+	year INTEGER, 
+	points INTEGER, 
+	team_program CHAR(50), 
+	season_year INTEGER NOT NULL, 
+	car_model CHAR(50) NOT NULL, 
+	principal_name CHAR(50) NOT NULL, 
+	PRIMARY KEY (name, year), 
+	FOREIGN KEY (principal) REFERENCES Principal(name) ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY (car_model) REFERENCES Car(car_model) ON DELETE CASCADE ON UPDATE CASCADE,
-	FOREIGN KEY (session_yaer) REFERENCES Season(season_year) ON DELETE CASCADE ON UPDATE CASCADE
+	FOREIGN KEY (session_year) REFERENCES Season(season_year) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Team_Driver (
