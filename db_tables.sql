@@ -25,18 +25,26 @@ CREATE TABLE Driver (
 	career_wins INTEGER
 );
 
-CREATE TABLE Team (
+CREATE TABLE Team1 (
 	name CHAR(50), 
 	year INTEGER, 
 	points INTEGER, 
-	team_program CHAR(50), 
-	season_year INTEGER NOT NULL, 
 	car_model CHAR(50) NOT NULL, 
 	principal_name CHAR(50) NOT NULL, 
 	PRIMARY KEY (name, year), 
 	FOREIGN KEY (principal) REFERENCES Principal(name) ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY (car_model) REFERENCES Car(model) ON DELETE CASCADE ON UPDATE CASCADE,
+);
+
+CREATE TABLE Team2 (
+	year INTEGER PRIMARY KEY, 
+	season_year INTEGER NOT NULL, 
 	FOREIGN KEY (season_year) REFERENCES Season(year) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Team3 (
+	name CHAR(50) PRIMARY KEY, 
+	team_program CHAR(50)
 );
 
 CREATE TABLE Drives_For (
@@ -71,14 +79,13 @@ CREATE TABLE Season (
 	year INTEGER
 );
 
-CREATE TABLE Race (
+CREATE TABLE Race1 (
 	p1 CHAR(50),
 	p2 CHAR(50),
 	p3 CHAR(50),
 	qp1 CHAR(50),
 	qp2 CHAR(50),
 	qp3 CHAR(50),
-	country CHAR(50),
 	fastest_lap CHAR(8),
 	circuit CHAR(50),
 	year INTEGER,
@@ -87,6 +94,11 @@ CREATE TABLE Race (
 	FORIEGN KEY (year) REFERENCES Season(year) ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY (safety_car_model) REFERENCES Saftey_Car(model) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+CREATE TABLE Race2 (
+	circuit CHAR(50) PRIMARY KEY, 
+	country CHAR(50)
+	);
 
 CREATE TABLE Lap_Record_Set (
 	time CHAR(8) PRIMARY KEY,
