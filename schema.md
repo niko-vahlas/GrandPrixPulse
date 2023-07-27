@@ -132,5 +132,5 @@ Year int,
 
 ***Driver\_name*** char(100) NOT NULL
 
-)
+) Candidate keys: Time
 
