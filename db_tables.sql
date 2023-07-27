@@ -20,10 +20,9 @@ CREATE TABLE Principal (
 );
 
 CREATE TABLE Driver (
-	name CHAR(50),
-	driver_number INTEGER,
-	points INTEGER,
-	PRIMARY KEY (name)
+	name CHAR(50) PRIMARY KEY,
+	career_points FLOAT,
+	career_wins INTEGER
 );
 
 CREATE TABLE Team (
