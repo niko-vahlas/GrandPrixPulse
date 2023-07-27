@@ -29,4 +29,4 @@ Functionality:
 We will use PHP/MySQL for backend and HTML/CSS for frontend. 
 
 ### ER Diagram
-![304project drawio](https://media.github.students.cs.ubc.ca/user/18369/files/1e05cdc1-60df-47f8-ac8f-95cf25b42862)
+![ER](https://media.github.students.cs.ubc.ca/user/20701/files/3c87af22-6d00-4e53-a48f-dbf9d684ae05)
