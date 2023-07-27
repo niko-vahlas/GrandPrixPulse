@@ -48,6 +48,12 @@ CREATE TABLE Team_Driver (
 	FOREIGN KEY (team_name, year) REFERENCES Team(team_name, year)
 );
 
+CREATE TABLE Season_Champion
+	(year INTEGER PRIMARY KEY,
+	driver_name CHAR(50),
+	FOREIGN KEY (driver_name) REFERENCES Driver(name))
+);
+
 CREATE TABLE Sponsor (
 	sponsor_name CHAR(50) PRIMARY KEY
 );
@@ -79,17 +85,15 @@ CREATE TABLE Race (
 	FORIEGN KEY (season_year) REFERENCES Season(season_year)
 );
 
-CREATE TABLE Lap_Record (
-	time REAL,
-	year YEAR,
+CREATE TABLE Lap_Record_Set
+	(time CHAR(8) PRIMARY KEY,
 	circuit_name CHAR(50),
-	PRIMARY KEY (time, circuit_name)
-);
-
-CREATE TABLE Set_Record (
 	driver_name CHAR(50),
-	time REAL,
-	PRIMARY KEY (driver_name, time),
-	FOREIGN KEY (driver_name) REFERENCES Driver(name),
-	FOREIGN KEY (time) REFERENCES Lap_Record(time)
+	year INTEGER,
+	FOREIGN KEY (driver_name) REFERENCES Driver(name)
+ );
+
+CREATE TABLE Safety_Car (
+	model CHAR(50) PRIMARY KEY,
+	manufacturer CHAR(50))
 );
