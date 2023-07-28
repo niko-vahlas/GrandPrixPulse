@@ -110,5 +110,5 @@ CREATE TABLE Lap_Record_Set (
 
 CREATE TABLE Safety_Car (
 	model CHAR(50) PRIMARY KEY,
-	manufacturer CHAR(50))
+	manufacturer CHAR(50)
 );
