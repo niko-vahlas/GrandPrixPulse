@@ -9,7 +9,7 @@
       src="https://kit.fontawesome.com/f45ab8657f.js"
       crossorigin="anonymous"
     ></script>
-    <title>F1 Records</title>
+    <title>Delete</title>
   </head>
   <body>
     <section id="about-us">
@@ -18,7 +18,7 @@
           <a class="personal--logo" href="index.html">F1 Records</a>
           <ul class="navbar--list">
             <li>
-              <a class="nav--link__anchor" href="delete.html">Delete</a>
+              <a class="nav--link__anchor" href="#Languages">Delete</a>
             </li>
             <li>
               <a class="nav--link__anchor" href="#Projects">Update</a>
@@ -35,23 +35,27 @@
           </ul>
         </div>
       </nav>
-      <div class="row">
-        <div class="container">
-          <div class="homepage">
-            <h1 class="about-us-para">
-              Welcome to <strong class="color-red">F1 Records</strong>, your
-              comprehensive source for all things Formula 1.
-            </h1>
-            <div class="img-container">
-              <img
-                src="assets/homepage_car.webp"
-                class="homepage-img"
-                alt="Car Graphic"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
+
+    <div class="container">
+      <div class="row">
+        <form
+          action="delete_engine_manufacturer.php"
+          method="post"
+          class="f1-form"
+        >
+          <label for="engine_model"
+            >Enter the model of the Engine Manufacturer to delete:</label
+          >
+          <input
+            type="text"
+            id="engine_model"
+            name="engine_model"
+            class="textbox"
+          />
+          <input type="submit" value="Delete" class="btn" />
+        </form>
+      </div>
+    </div>
   </body>
 </html>
