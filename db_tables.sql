@@ -79,6 +79,11 @@ CREATE TABLE Pays_For (
 	FOREIGN KEY (sponsor_name) REFERENCES Sponsor(name) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+CREATE TABLE Safety_Car (
+	model CHAR(50) PRIMARY KEY,
+	manufacturer CHAR(50)
+);
+
 CREATE TABLE Race1 (
 	p1 CHAR(50),
 	p2 CHAR(50),
@@ -107,8 +112,3 @@ CREATE TABLE Lap_Record_Set (
 	year INTEGER,
 	FOREIGN KEY (driver_name) REFERENCES Driver(name) ON DELETE CASCADE ON UPDATE CASCADE
  );
-
-CREATE TABLE Safety_Car (
-	model CHAR(50) PRIMARY KEY,
-	manufacturer CHAR(50)
-);
