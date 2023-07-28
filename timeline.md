@@ -1,0 +1,11 @@
+## Tasks:
+- Connect to database
+- Make sure 3d model works
+- Execute sql statements
+- Insert data into tables
+- Allow queries by various atrributes (i.e. driver name, team name, team program) to view attributes such as points, lap times, or 
+  - We need to make a form capable of selecting multiple attributes for the query
+  - We need to proccess the form in php and use the conneciton to the database to make the query
+  - The output of the query will be displayed in a table format on the same page
+- Populate tables with a large amount of data from kaggle and wikipedia (if enough time)
+  - We are going to write a script to go through large amounts of data and insert them to the tables
