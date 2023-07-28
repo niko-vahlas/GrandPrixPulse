@@ -4,7 +4,7 @@ CREATE TABLE Engine_Manufacturer (
 );
 
 CREATE TABLE Car (
-	car_model CHAR(50) PRIMARY KEY
+	model CHAR(50) PRIMARY KEY
 );
 
 CREATE TABLE Car_Engine (
@@ -26,7 +26,7 @@ CREATE TABLE Driver (
 );
 
 CREATE TABLE Season (
-	year INTEGER
+	year INTEGER PRIMARY KEY
 );
 
 CREATE TABLE Team1 (
@@ -74,8 +74,8 @@ CREATE TABLE Pays_For (
 	team_name CHAR(50),
 	team_year INTEGER,
 	sponsor_name CHAR(50),
-	PRIMARY KEY (team_name, year, sponsor_name),
-	FOREIGN KEY (team_name, year) REFERENCES Team1(name, year) ON DELETE CASCADE ON UPDATE CASCADE,
+	PRIMARY KEY (team_name, team_year, sponsor_name),
+	FOREIGN KEY (team_name, team_year) REFERENCES Team1(name, year) ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY (sponsor_name) REFERENCES Sponsor(name) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
@@ -92,7 +92,7 @@ CREATE TABLE Race1 (
 	safety_car_model CHAR(50),
 	PRIMARY KEY (year, circuit),
 	FOREIGN KEY (year) REFERENCES Season(year) ON DELETE CASCADE ON UPDATE CASCADE,
-	FOREIGN KEY (safety_car_model) REFERENCES Saftey_Car(model) ON DELETE CASCADE ON UPDATE CASCADE
+	FOREIGN KEY (safety_car_model) REFERENCES Safety_Car(model) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Race2 (
