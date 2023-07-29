@@ -1,5 +1,5 @@
 ## Tasks:
-- Connect to database (August 4) (Niko)
+- Connect to database (August 4) (Niko, Tony)
 - Make sure 3d model works (August 7) (Tony)
 - Execute sql statements (August 6) (Niko)
 - Insert data into tables (August 5) (Arul)
@@ -7,5 +7,5 @@
   - We need to make a form capable of selecting multiple attributes for the query (August 6)
   - We need to proccess the form in php and use the conneciton to the database to make the query (August 6)
   - The output of the query will be displayed in a table format on the same page (August 6)
-- Populate tables with a large amount of data from kaggle and wikipedia (if enough time) (August 8)
+- Populate tables with a large amount of data from kaggle and wikipedia (if enough time) (August 8) Arul)
   - We are going to write a script to go through large amounts of data and insert them to the tables 
