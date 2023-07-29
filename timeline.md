@@ -1,6 +1,6 @@
 ## Tasks:
 - Connect to database (August 4) (Niko)
-- Make sure 3d model works (August 7) 
+- Make sure 3d model works (August 7) (Tony)
 - Execute sql statements (August 6) (Niko)
 - Insert data into tables (August 5) (Arul)
 - Allow queries by various atrributes (i.e. driver name, team name, team program) to view attributes such as points, lap times, or (All)
