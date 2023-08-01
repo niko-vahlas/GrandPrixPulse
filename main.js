@@ -28,10 +28,30 @@ loader.load( './assets/model/source/mp44.gltf', function ( gltf ) {
 
 } );
 
-const light = new THREE.AmbientLight( 0xffffff ); // soft white light
-scene.add( light );
+let ambientLight = new THREE.AmbientLight( 0xffffff , .2);
+scene.add( ambientLight );
 
 camera.position.z = 5;
+
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap; // 
+
+let directionalLight_top = new THREE.DirectionalLight( 0xffffff, 3 );
+directionalLight_top.castShadow = true;
+directionalLight_top.position.x = 2;
+directionalLight_top.position.y = 5;
+directionalLight_top.position.z = 0;
+
+directionalLight_top.shadow.bias = -0.0001;
+directionalLight_top.shadow.mapSize.width = 256;
+directionalLight_top.shadow.mapSize.height = 256;
+directionalLight_top.shadow.camera.near = 0.1;
+directionalLight_top.shadow.camera.far = 100.0;
+directionalLight_top.shadow.camera.left = 100;
+directionalLight_top.shadow.camera.right = -100;
+directionalLight_top.shadow.camera.top = 100;
+directionalLight_top.shadow.camera.bottom = -100;
+scene.add(directionalLight_top);
 
 function animate() {
 	requestAnimationFrame( animate );
