@@ -17,7 +17,7 @@ h4,
 h5,
 h6,
 span {
-  color: #242424;
+  color: #ffffff;
   text-align: center;
   line-height: 1.25;
 }
@@ -197,4 +197,9 @@ label {
 .textbox {
   border: #ddd 1px solid;
   padding: 4px;
+}
+
+.render-canvas{
+  position: absolute;
+  width: 100%;
 }
