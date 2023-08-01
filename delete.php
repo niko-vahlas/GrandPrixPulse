@@ -1,17 +1,35 @@
 <?php
-// Connect to your database. Replace dbname, host, username and password with your real info
-$dbh = new PDO('mysql:unix_socket=/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock;dbname=f1_database', 'root', '');
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
+$servername = "localhost";
+$username = "root";
+$password = ""; 
+$dbname = "f1_database";
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Prepare delete statement
-    $stmt = $dbh->prepare("DELETE FROM Engine_Manufacturer WHERE model = :model");
-    
-    // Bind the user input to the statement and execute
-    $stmt->bindParam(':model', $_POST['engine_model']);
-    $stmt->execute();
-    
-    echo "Engine Manufacturer deleted successfully";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
 }
+
+// Retrieve the engine model from the form data
+$engine_model = mysqli_real_escape_string($conn, $_POST['engine_model']);
+
+// SQL query to delete the record
+$sql = "DELETE FROM Engine_Manufacturer WHERE model = '$engine_model'";
+
+if ($conn->query($sql) === TRUE) {
+  header("Location: index.html"); // Redirect to index.html
+  exit;
+} else {
+  echo "Error deleting record: " . $conn->error;
+}
+
+$conn->close();
+
 ?>
