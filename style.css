@@ -163,9 +163,8 @@ section:nth-child(even) {
   color: #e10600;
 }
 
-form {
-  width: 300px;
-  height: 150px;
+.f1-form {
+  width: 400px;
   margin: 0 auto;
   padding: 10px;
   border: 1px solid #f1f1f1;
@@ -187,11 +186,13 @@ label {
   color: #fff;
   background: #e10600;
   border: #ddd 1px solid;
-  border-radius: 3px;
+  border-radius: 5px;
   width: 100%;
+  padding: 4px;
 }
 .btn:hover {
   cursor: pointer;
+  background-color: #ff0800;
 }
 
 .textbox {
@@ -199,7 +200,13 @@ label {
   padding: 4px;
 }
 
-.render-canvas{
+.render-canvas {
   position: absolute;
   width: 100%;
+}
+
+.textbox:focus {
+  /* When you click on the field... */
+  outline: none;
+  box-shadow: 0 0 10px #e10600;
 }

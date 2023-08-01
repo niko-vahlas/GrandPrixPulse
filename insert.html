@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/f45ab8657f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Delete</title>
+  </head>
+  <body>
+    <section id="about-us">
+      <nav id="navbar">
+        <div class="navbar--container">
+          <a class="personal--logo" href="index.html">F1 Records</a>
+          <ul class="navbar--list">
+            <li>
+              <a class="nav--link__anchor" href="delete.html">Delete</a>
+            </li>
+            <li>
+              <a class="nav--link__anchor" href="insert.html">Insert</a>
+            </li>
+            <li>
+              <a class="nav--link__anchor" href="#Languages">Selection</a>
+            </li>
+            <li>
+              <a class="nav--link__anchor" href="#Languages">Projection</a>
+            </li>
+            <li>
+              <a class="nav--link__anchor" href="#Languages">Join</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+
+    <div class="container">
+      <div class="row">
+        <form action="delete.php" method="post" class="f1-form">
+          <label for="driver_name"
+            >Enter the name of the driver to insert:</label
+          >
+          <input
+            type="text"
+            id="driver_name"
+            name="driver_name"
+            class="textbox"
+          />
+          <label for="team_name">Enter a team the driver was on:</label>
+          <input type="text" id="team_name" name="team_name" class="textbox" />
+          <label for="team_year"
+            >Enter the the year the driver was on that team:</label
+          >
+          <input type="text" id="team_year" name="team_year" class="textbox" />
+          <label for="sponsor_name">Enter the name of a team sponsor:</label>
+          <input
+            type="text"
+            id="sponsor_name"
+            name="sponsor_name"
+            class="textbox"
+          />
+          <label for="race_circuit_name"
+            >Enter the circuit name for race from that season:</label
+          >
+          <input
+            type="text"
+            id="race_circuit_name"
+            name="race_circuit_name"
+            class="textbox"
+          />
+          <label for="safety_car"
+            >Enter the model of the safety car for that race:</label
+          >
+          <input
+            type="text"
+            id="safety_car"
+            name="safety_car"
+            class="textbox"
+          />
+          <label for="principal_name"
+            >Enter the name of the principal for that year:</label
+          >
+          <input
+            type="text"
+            id="principal_name"
+            name="principal_name"
+            class="textbox"
+          />
+          <label for="engine_model"
+            >Enter the model of the Engine Model to delete:</label
+          >
+          <input
+            type="text"
+            id="engine_model"
+            name="engine_model"
+            class="textbox"
+          />
+          <label for="engine_model">
+            >Enter the model of the Engine Model to delete:</label
+          >
+          <input
+            type="text"
+            id="engine_model"
+            name="engine_model"
+            class="textbox"
+          />
+          <input type="submit" value="Delete" class="btn" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
