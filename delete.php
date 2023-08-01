@@ -9,7 +9,7 @@ $username = "root";
 $password = ""; 
 $dbname = "f1_database";
 
-// Create connection
+// This creates our connection to the server
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
