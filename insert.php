@@ -18,11 +18,33 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-// Retrieve the engine model from the form data
+// Retrieve the driver_name from the form data
+$driver_name = mysqli_real_escape_string($conn, $_POST['driver_name']);
+
+// Retrieve the team_name from the form data
+$team_name = mysqli_real_escape_string($conn, $_POST['team_name']);
+
+// Retrieve the year from the form data
+$year = mysqli_real_escape_string($conn, $_POST['year']);
+
+// Retrieve the sponsor_name from the form data
+$sponsor_name = mysqli_real_escape_string($conn, $_POST['sponsor_name']);
+
+// Retrieve the race_circuit_name from the form data
+$race_circuit_name = mysqli_real_escape_string($conn, $_POST['race_circuit_name']);
+
+// Retrieve the safety_car from the form data
+$safety_car = mysqli_real_escape_string($conn, $_POST['safety_car']);
+
+// Retrieve the principal_name from the form data
+$principal_name = mysqli_real_escape_string($conn, $_POST['principal_name']);
+
+// Retrieve the car_model from the form data
+$car_model = mysqli_real_escape_string($conn, $_POST['car_model']);
+
+// Retrieve the engine_model from the form data
 $engine_model = mysqli_real_escape_string($conn, $_POST['engine_model']);
 
-// SQL query to delete the engine model
-$sql = "DELETE FROM Engine_Manufacturer WHERE model = '$engine_model'";
 
 // Redirect to index.html once we are done with deletion
 if ($conn->query($sql) === TRUE) {
