@@ -46,6 +46,7 @@ $car_model = mysqli_real_escape_string($conn, $_POST['car_model']);
 $engine_model = mysqli_real_escape_string($conn, $_POST['engine_model']);
 
 
+
 // Redirect to index.html once we are done with deletion
 if ($conn->query($sql) === TRUE) {
   header("Location: index.html"); 
