@@ -63,7 +63,7 @@ scene.add(light2);
 
 
 camera.position.x = -13.651946679824615;
-camera.position.y = 5.006441410947541;
+camera.position.y = 3;
 camera.position.z = -17.5920718905439;
 
 var period = 20;
