@@ -14,7 +14,7 @@
   </head>
   <body>
     <section id="about-us">
-      <nav id="navbar">
+    <nav id="navbar">
         <div class="navbar--container">
           <a class="personal--logo" href="index.html">F1 Records</a>
           <ul class="navbar--list">
@@ -25,7 +25,9 @@
               <a class="nav--link__anchor" href="insert.html">Insert</a>
             </li>
             <li>
-              <a class="nav--link__anchor" href="#Languages">Selection</a>
+              <a class="nav--link__anchor" href="hardcodedqueries.php"
+                >Hardcoded Queries
+              </a>
             </li>
             <li>
               <a class="nav--link__anchor" href="#Languages">Projection</a>
@@ -40,23 +42,12 @@
 
     <div class="container">
       <div class="row"></div>
-      <h2>
-        <?php
-          include 'max-points.php';
-          if (isset($_GET['max-points-submit'])) {
-            echo getMaxPoints(); 
-          }
-          
-      ?>
-      </h2>
-
-      <form action="" name="max-points-submit" method="get">
-        <input
-          type="submit"
-          value="Press here to display the max points "
-          class="btn"
-        />
-      </form>
+      <form method="post">
+      <input type="hidden" name="form_name" value="get_max_points_form">
+        <input type="text" id="singleResultTextbox" name="singleResultTextbox" readonly
+        value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form_name'] == 'get_max_points_form'){ require 'max-points.php'; } ?>">
+        <input type="submit" value="Get data from DB" class="btn">
+    </form>
     </div>
   </body>
 </html>

@@ -1,7 +1,6 @@
 <?php
-
-function getMaxPoints() {
-// Will report errors if there are any
+function getMaxPoints(){
+    // Will report errors if there are any
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -19,19 +18,18 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
+    $sql = "SELECT MAX(career_points) FROM Driver";
+    $result = $conn->query($sql);
 
-
-// SQL query to get max career points
-$sql = "SELECT MAX(career_points) AS max_points FROM Driver";
-$results = $conn->query($sql);
-
-//closes our connection
-$conn->close();
-
-return $results;
-
-
-
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+            echo $row["MAX(career_points)"];
+        
+    } else {
+        echo "0 results";
+    }
+    $conn->close();
 }
 
+getMaxPoints();
 ?>
