@@ -29,12 +29,6 @@
                 >Hardcoded Queries
               </a>
             </li>
-            <li>
-              <a class="nav--link__anchor" href="#Languages">Projection</a>
-            </li>
-            <li>
-              <a class="nav--link__anchor" href="#Languages">Join</a>
-            </li>
           </ul>
         </div>
       </nav>
