@@ -37,10 +37,11 @@
     <div class="container">
       <div class="row"></div>
       <form method="post">
-      <input type="hidden" name="form_name" value="get_max_points_form">
-        <input type="text" id="singleResultTextbox" name="singleResultTextbox" readonly
-        value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form_name'] == 'get_max_points_form'){ require 'max-points.php'; } ?>">
-        <input type="submit" value="Get data from DB" class="btn">
+      <input type="hidden" name="form_name" value="get_drivers_form">
+        <div> 
+          <?php if($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form_name'] == 'get_drivers_form'){ require 'drivers_per_team.php'; } ?>
+        </div>
+        <input type="submit" value="Calculate unqiue driver count per team" class="btn">
     </form>
     </div>
   </body>
