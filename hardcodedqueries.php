@@ -11,8 +11,25 @@
     ></script>
 
     <title>Delete</title>
+    <script
+      async
+      src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"
+    ></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@v0.155.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@v0.155.0/examples/jsm/"
+        }
+      }
+    </script>
+
+    <script type="module" src="./main.js"></script>
   </head>
   <body>
+    <canvas class="render-canvas" id="render-canvas" style="z-index: 0;"></canvas>
+
     <section id="about-us">
     <nav id="navbar">
         <div class="navbar--container">
@@ -27,6 +44,11 @@
             <li>
               <a class="nav--link__anchor" href="hardcodedqueries.php"
                 >Hardcoded Queries
+              </a>
+            </li>
+            <li>
+              <a class="nav--link__anchor" href="projection.php">
+                Projection
               </a>
             </li>
           </ul>

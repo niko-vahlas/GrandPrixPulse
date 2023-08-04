@@ -31,6 +31,7 @@
 
     <section id="about-us">
       <nav id="navbar">
+      <nav id="navbar">
         <div class="navbar--container">
           <a class="personal--logo" href="index.html">F1 Records</a>
           <ul class="navbar--list">
@@ -46,10 +47,9 @@
               </a>
             </li>
             <li>
-              <a class="nav--link__anchor" href="#Languages">Projection</a>
-            </li>
-            <li>
-              <a class="nav--link__anchor" href="#Languages">Join</a>
+              <a class="nav--link__anchor" href="projection.php">
+                Projection
+              </a>
             </li>
           </ul>
         </div>
@@ -58,7 +58,7 @@
 
     <div class="container">
       <div class="row">
-        <form action="projSel.php" method="post" class="f1-form" style="opacity: 0.8;">
+        <form action="projSel.php" method="post" class="f1-form">
             <label>Check the attributes to retrieve from teams: </label>
             <label for="name">Team name</label>
             <input
