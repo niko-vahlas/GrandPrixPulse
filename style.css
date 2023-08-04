@@ -211,3 +211,7 @@ label {
   outline: none;
   box-shadow: 0 0 10px #e10600;
 }
+
+table, th, td {
+  border: 1px solid white;
+}
