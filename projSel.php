@@ -10,8 +10,25 @@
       crossorigin="anonymous"
     ></script>
     <title>Delete</title>
+    <script
+      async
+      src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"
+    ></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@v0.155.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@v0.155.0/examples/jsm/"
+        }
+      }
+    </script>
+
+    <script type="module" src="./main.js"></script>
   </head>
   <body>
+    <canvas class="render-canvas" id="render-canvas"></canvas>
+
     <section id="about-us">
       <nav id="navbar">
         <div class="navbar--container">
@@ -41,7 +58,7 @@
 
     <div class="container">
       <div class="row">
-        <form action="projSel.php" method="post" class="f1-form">
+        <form action="projSel.php" method="post" class="f1-form" style="opacity: 0.8;">
             <label>Check the attributes to retrieve from teams: </label>
             <label for="name">Team name</label>
             <input
