@@ -106,9 +106,10 @@ CREATE TABLE Race2 (
 	);
 
 CREATE TABLE Lap_Record_Set (
-	time CHAR(8) PRIMARY KEY,
+	time CHAR(8),
 	circuit_name CHAR(50),
 	driver_name CHAR(50) NOT NULL,
 	year INTEGER,
+	PRIMARY KEY (circuit_name, year)
 	FOREIGN KEY (driver_name) REFERENCES Driver(name) ON DELETE CASCADE ON UPDATE CASCADE
  );
