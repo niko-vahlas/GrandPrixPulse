@@ -17,9 +17,6 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-// Retrieve the points gap input
-$points_gap = mysqli_real_escape_string($conn, $_POST['points_gap']);
-
 $sql = "SELECT t1.name AS team_name
 FROM Team1 t1
 WHERE NOT EXISTS (

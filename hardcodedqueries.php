@@ -84,12 +84,6 @@
       <form method="post" class="f1-form">
       <input type="hidden" name="form_name" value="unique_teams_form">
         <label for="unique_teams">Find teams that have raced in every season:</label>
-          <input
-            type="text"
-            id="unique_teams"
-            name="unique_teams"
-            class="textbox"
-          />
           <div> 
           <?php if($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form_name'] == 'unique_teams_form'){ require 'unique_teams.php'; } ?>
         </div>
