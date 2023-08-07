@@ -106,7 +106,7 @@ CREATE TABLE Race2 (
 	);
 
 CREATE TABLE Lap_Record_Set (
-	time CHAR(8),
+	time CHAR(9),
 	circuit_name CHAR(50),
 	driver_name CHAR(50) NOT NULL,
 	year INTEGER,
