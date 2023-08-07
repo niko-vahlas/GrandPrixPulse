@@ -27,7 +27,11 @@
     <script type="module" src="./main.js"></script>
   </head>
   <body>
-    <canvas class="render-canvas" id="render-canvas" style="z-index: 0;"></canvas>
+    <canvas
+      class="render-canvas"
+      id="render-canvas"
+      style="z-index: 0"
+    ></canvas>
 
     <section id="about-us">
       <nav id="navbar">
@@ -57,9 +61,9 @@
 
     <div class="container">
       <div class="row">
-        <form action="delete.php" method="post" class="f1-form">
+        <form action="insert.php" method="post" class="f1-form">
           <label for="driver_name"
-            >Enter the name of the driver to insert:</label
+            >Enter the name of the driver who set the record:</label
           >
           <input
             type="text"
@@ -67,61 +71,21 @@
             name="driver_name"
             class="textbox"
           />
-          <label for="team_name">Enter a team the driver was on:</label>
-          <input type="text" id="team_name" name="team_name" class="textbox" />
-          <label for="year"
-            >Enter the the year the driver was on that team:</label
-          >
+
+          <label for="circuit_name">Enter the name of the circuit:</label>
+          <input
+            type="text"
+            id="circuit_name"
+            name="circuit_name"
+            class="textbox"
+          />
+
+          <label for="time">Enter the lap time (00:00:000):</label>
+          <input type="text" id="time" name="time" class="textbox" />
+
+          <label for="year">Enter the year:</label>
           <input type="text" id="year" name="year" class="textbox" />
-          <label for="sponsor_name"
-            >Enter the name of a team sponsor for that year:</label
-          >
-          <input
-            type="text"
-            id="sponsor_name"
-            name="sponsor_name"
-            class="textbox"
-          />
-          <label for="race_circuit_name"
-            >Enter a circuit name for a race from that season:</label
-          >
-          <input
-            type="text"
-            id="race_circuit_name"
-            name="race_circuit_name"
-            class="textbox"
-          />
-          <label for="safety_car"
-            >Enter the model of the safety car for that race:</label
-          >
-          <input
-            type="text"
-            id="safety_car"
-            name="safety_car"
-            class="textbox"
-          />
-          <label for="principal_name"
-            >Enter the name of the principal for that year:</label
-          >
-          <input
-            type="text"
-            id="principal_name"
-            name="principal_name"
-            class="textbox"
-          />
-          <label for="car_model">
-            Enter the car model the driver raced with that year:</label
-          >
-          <input type="text" id="car_model" name="car_model" class="textbox" />
-          <label for="engine_model">
-            Enter the engine model used on the driver's car that year:</label
-          >
-          <input
-            type="text"
-            id="engine_model"
-            name="engine_model"
-            class="textbox"
-          />
+
           <input type="submit" value="Insert" class="btn" />
         </form>
       </div>
