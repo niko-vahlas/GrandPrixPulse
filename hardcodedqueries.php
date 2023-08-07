@@ -28,7 +28,7 @@
     <script type="module" src="./main.js"></script>
   </head>
   <body>
-    <canvas class="render-canvas" id="render-canvas" style="z-index: 0;"></canvas>
+    <canvas class="render-canvas" id="render-canvas" style="z-index: -1;"></canvas>
 
     <section id="about-us">
     <nav id="navbar">
