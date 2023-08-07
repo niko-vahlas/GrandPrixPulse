@@ -1,4 +1,6 @@
 <?php
+//Driver must exist
+
 
 // Will report errors if there are any
 ini_set('display_errors', 1);

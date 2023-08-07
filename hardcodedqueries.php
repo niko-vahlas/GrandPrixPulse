@@ -57,14 +57,30 @@
     </section>
 
     <div class="container">
-      <div class="row"></div>
-      <form method="post">
+      <div class="row">
+      <form method="post" class="f1-form">
       <input type="hidden" name="form_name" value="get_drivers_form">
         <div> 
           <?php if($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form_name'] == 'get_drivers_form'){ require 'drivers_per_team.php'; } ?>
         </div>
         <input type="submit" value="Calculate unqiue driver count per team" class="btn">
     </form>
+
+    <form method="post" class="f1-form">
+      <input type="hidden" name="form_name" value="points_gap_form">
+        <label for="points_gap">Points gap between first and second:</label>
+          <input
+            type="text"
+            id="points_gap"
+            name="points_gap"
+            class="textbox"
+          />
+          <div> 
+          <?php if($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form_name'] == 'points_gap_form'){ require 'points_gap_form.php'; } ?>
+        </div>
+        <input type="submit" value="Find dominant winners" class="btn">
+    </form>
+    </div>
     </div>
   </body>
 </html>

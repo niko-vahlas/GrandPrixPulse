@@ -31,7 +31,6 @@
 
     <section id="about-us">
       <nav id="navbar">
-      <nav id="navbar">
         <div class="navbar--container">
           <a class="personal--logo" href="index.html">F1 Records</a>
           <ul class="navbar--list">
@@ -155,7 +154,7 @@
             exit;
           }
 
-          $sql = substr($sql, 0, -2) . ' FROM team1';
+          $sql = substr($sql, 0, -2) . ' FROM Team1';
           $result = $conn->query($sql);
           
           while($row = mysqli_fetch_array($result)){ 
