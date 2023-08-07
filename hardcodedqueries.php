@@ -10,7 +10,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <title>Delete</title>
+    <title>Harcoded Queries</title>
     <script
       async
       src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"
@@ -43,7 +43,7 @@
             </li>
             <li>
               <a class="nav--link__anchor" href="hardcodedqueries.php"
-                >Hardcoded Queries
+                >Optional Hardcode
               </a>
             </li>
             <li>
@@ -58,6 +58,7 @@
 
     <div class="container">
       <div class="row">
+        <!--Aggregation with group by-->
       <form method="post" class="f1-form">
       <input type="hidden" name="form_name" value="get_drivers_form">
         <div> 
@@ -65,7 +66,7 @@
         </div>
         <input type="submit" value="Calculate unqiue driver count per team" class="btn">
     </form>
-
+<!--Aggregation with having-->
     <form method="post" class="f1-form">
       <input type="hidden" name="form_name" value="points_gap_form">
         <label for="points_gap">Points gap between first and second:</label>
@@ -80,7 +81,7 @@
         </div>
         <input type="submit" value="Find dominant winners" class="btn">
     </form>
-    </div>
+      <!--divison-->
       <form method="post" class="f1-form">
       <input type="hidden" name="form_name" value="unique_teams_form">
         <label for="unique_teams">Find teams that have raced in every season:</label>
@@ -89,6 +90,7 @@
         </div>
         <input type="submit" value="Get teams" class="btn">
     </form>
+    </div>
     </div>
   </body>
 </html>

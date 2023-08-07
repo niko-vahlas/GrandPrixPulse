@@ -30,7 +30,7 @@
     <canvas class="render-canvas" id="render-canvas"></canvas>
 
     <section id="about-us">
-      <nav id="navbar">
+      <<nav id="navbar">
         <div class="navbar--container">
           <a class="personal--logo" href="index.html">F1 Records</a>
           <ul class="navbar--list">
@@ -42,7 +42,7 @@
             </li>
             <li>
               <a class="nav--link__anchor" href="hardcodedqueries.php"
-                >Hardcoded Queries
+                >Optional Hardcode
               </a>
             </li>
             <li>
