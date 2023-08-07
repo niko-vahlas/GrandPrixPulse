@@ -1,5 +1,4 @@
 <?php
-function findgap(){
     // Will report errors if there are any
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
@@ -43,6 +42,4 @@ if ($result->num_rows > 0) {
     echo "No data found.";
 }
 
-}
-findgap();
 ?>
