@@ -91,6 +91,17 @@
         <input type="submit" value="Get teams" class="btn">
     </form>
     </div>
+      <!--Nested Aggregation with group by-->
+      <form method="post" class="f1-form">
+          <input type="hidden" name="form_name" value="non_top3_winners.php">
+          <label for="non_top3">Enter year to view drivers who didn't win the championship that season but won a race without qualifying in the top 3:</label>
+
+          <input type="text" class="textbox" name="year" id="year" required>
+          <div> 
+              <?php if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form_name'] == 'non_top3_winners.php') { require 'non_top3_winners.php'; } ?>
+          </div>
+          <input type="submit" value="Find driver counts for entered year" class="btn">
+      </form>
     </div>
   </body>
 </html>
