@@ -35,7 +35,7 @@
           <a class="personal--logo" href="index.html">F1 Records</a>
           <ul class="navbar--list">
             <li>
-              <a class="nav--link__anchor" href="delete.html">Delete</a>
+              <a class="nav--link__anchor" href="delete.php">Delete</a>
             </li>
             <li>
               <a class="nav--link__anchor" href="insert.html">Insert</a>
@@ -84,7 +84,7 @@
             name="conditions"
             class="textbox"
           />
-          <input type="submit" value="Submit">
+          <input type="submit" value="Submit" class="btn">
         </form>
         <br><br>
         <div style="color: white">
