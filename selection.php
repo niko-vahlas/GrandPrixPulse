@@ -226,7 +226,7 @@
           }
           ?>
           <input type="submit" value="Submit" class="btn">
-        </form>
+        </form><br><br>
         <div style="color: white">
           <?php 
 
