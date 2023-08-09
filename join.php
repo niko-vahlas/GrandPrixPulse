@@ -86,12 +86,17 @@
             // This creates our connection to the server, we can view the server using the myPHPAdmin link in XAMP
             $conn = new mysqli($servername, $username, $password, $dbname);
 
+            $elements = array();
+
             $empty = true;
             $sql = "SELECT company_name FROM Engine_Manufacturer"; 
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
+                  if (!in_array($row["company_name"], $elements)) {
+                    array_push($elements, $row["company_name"]);
                     echo '<option value="' . $row["company_name"] . '">' . $row["company_name"] . '</option>';
+                  }
                 }
                 $empty = false;
             } 
@@ -100,7 +105,10 @@
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
+                  if (!in_array($row["manufacturer"], $elements)) {
+                    array_push($elements, $row["manufacturer"]);
                     echo '<option value="' . $row["manufacturer"] . '">' . $row["manufacturer"] . '</option>';
+                  }
                 }
                 $empty = false;
             }
