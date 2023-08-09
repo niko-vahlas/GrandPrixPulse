@@ -68,14 +68,34 @@
     <div class="container">
       <div class="row">
         <form action="./update.php" method="post" class="f1-form">
-          Update engine manufacturer attributes - enter engine model key: <br>
-          <input
-            type="text"
-            id="model"
-            name="model"
-            class="textbox"
-            required
-          />
+          <label for="engine_model">Update engine manufacturer attributes - enter engine model key: </label>
+          <select id="engine_model" name="engine_model" class="textbox">
+          <?php
+
+          // Will report errors if there are any
+          ini_set('display_errors', 1);
+          ini_set('display_startup_errors', 1);
+          error_reporting(E_ALL);
+
+          $servername = "localhost";
+          $username = "root";
+          $password = ""; 
+          $dbname = "f1_database";
+
+          // This creates our connection to the server, we can view the server using the myPHPAdmin link in XAMP
+          $conn = new mysqli($servername, $username, $password, $dbname);
+
+          $sql = "SELECT model FROM Engine_Manufacturer"; // Adjust the query to match your database schema
+          $result = $conn->query($sql);
+          if ($result->num_rows > 0) {
+              while($row = $result->fetch_assoc()) {
+                  echo '<option value="' . $row["model"] . '">' . $row["model"] . '</option>';
+              }
+          } else {
+              echo '<option value="">No engines found</option>';
+          }
+          ?>
+          </select>
           <br><br>Leave text box empty to preserve previous value
         <label for="table">Enter new model: </label>
           <input
@@ -114,12 +134,10 @@
           if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
           }
-
-          if (!isset($_POST['model']))
+          
+          if (!array_key_exists('engine_model', $_POST) || $_POST['engine_model'] == "")
             exit;
           
-          // construct query using input
-
           $sql = "UPDATE engine_manufacturer SET ";
           if (isset($_POST['model_new'])) {
             $sql = $sql . "model = '" . $_POST['model_new'] . "'";
@@ -131,7 +149,7 @@
             $sql = $sql . "company_name = '" . $_POST['company_name'] . "'";
           }
 
-          $sql = $sql . " WHERE model = '" . $_POST['model'] . "';";
+          $sql = $sql . " WHERE model = '" . $_POST['engine_model'] . "';";
 
           try {
             $result = $conn->query($sql);
