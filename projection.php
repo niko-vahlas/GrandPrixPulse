@@ -30,7 +30,7 @@
     <canvas class="render-canvas" id="render-canvas"></canvas>
 
     <section id="about-us">
-      <<nav id="navbar">
+      <nav id="navbar">
         <div class="navbar--container">
           <a class="personal--logo" href="index.html">F1 Records</a>
           <ul class="navbar--list">
@@ -57,7 +57,7 @@
 
     <div class="container">
       <div class="row">
-        <form action="projSel.php" method="post" class="f1-form">
+        <form action="projection.php" method="post" class="f1-form">
             <label>Check the attributes to retrieve from teams: </label>
             <label for="name">Team name</label>
             <input
@@ -96,6 +96,7 @@
             />
           <input type="submit" value="Get Attributes" class="btn" />
         </form>
+        <br><br>
         <div style="color: white">
           <?php 
 
