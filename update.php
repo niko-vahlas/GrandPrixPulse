@@ -74,6 +74,7 @@
             id="model"
             name="model"
             class="textbox"
+            required
           />
           <br><br>Leave text box empty to preserve previous value
         <label for="table">Enter new model: </label>
@@ -90,7 +91,7 @@
             name="company_name"
             class="textbox"
           />
-          <input type="submit" value="Submit">
+          <input type="submit" value="Submit" class="btn">
         </form>
         <br><br>
         <div style="color: white">
@@ -113,6 +114,9 @@
           if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
           }
+
+          if (!isset($_POST['model']))
+            exit;
           
           // construct query using input
 

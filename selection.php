@@ -69,6 +69,7 @@
             id="table"
             name="table"
             class="textbox"
+            required
           />
           <label for="attributes">Enter attribute names separated by commas: </label>
           <input
@@ -84,7 +85,7 @@
             name="conditions"
             class="textbox"
           />
-          <input type="submit" value="Submit">
+          <input type="submit" value="Submit" class="btn">
         </form>
         <br><br>
         <div style="color: white">
