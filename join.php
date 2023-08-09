@@ -87,7 +87,7 @@
             $conn = new mysqli($servername, $username, $password, $dbname);
 
             $empty = true;
-            $sql = "SELECT company_name FROM Engine_Manufacturer"; // Adjust the query to match your database schema
+            $sql = "SELECT company_name FROM Engine_Manufacturer"; 
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
@@ -96,7 +96,7 @@
                 $empty = false;
             } 
 
-            $sql = "SELECT manufacturer FROM safety_car"; // Adjust the query to match your database schema
+            $sql = "SELECT manufacturer FROM safety_car";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {

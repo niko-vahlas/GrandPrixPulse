@@ -88,7 +88,7 @@
           // This creates our connection to the server, we can view the server using the myPHPAdmin link in XAMP
           $conn = new mysqli($servername, $username, $password, $dbname);
 
-          $sql = "SELECT model FROM Engine_Manufacturer"; // Adjust the query to match your database schema
+          $sql = "SELECT model FROM Engine_Manufacturer"; 
           $result = $conn->query($sql);
           if ($result->num_rows > 0) {
               while($row = $result->fetch_assoc()) {

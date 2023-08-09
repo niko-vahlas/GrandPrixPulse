@@ -94,7 +94,7 @@ if ($conn->connect_error) {
     </section>
 
     <?php
-    $sql = "SELECT model FROM Engine_Manufacturer"; // Adjust the query to match your database schema
+    $sql = "SELECT model FROM Engine_Manufacturer"; 
     $result = $conn->query($sql);
     ?>
 
