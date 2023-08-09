@@ -76,8 +76,16 @@ if ($conn->connect_error) {
               </a>
             </li>
             <li>
-              <a class="nav--link__anchor" href="selection.php">
-                Selection
+              <a class="nav--link__anchor" href="selection.php"> Selection </a>
+            </li>
+            <li>
+              <a class="nav--link__anchor" href="update.php">
+                Update
+              </a>
+            </li>
+            <li>
+              <a class="nav--link__anchor" href="join.php">
+                Join
               </a>
             </li>
           </ul>
