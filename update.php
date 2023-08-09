@@ -35,7 +35,7 @@
           <a class="personal--logo" href="index.html">F1 Records</a>
           <ul class="navbar--list">
             <li>
-              <a class="nav--link__anchor" href="delete.php">Delete</a>
+              <a class="nav--link__anchor" href="delete.html">Delete</a>
             </li>
             <li>
               <a class="nav--link__anchor" href="insert.html">Insert</a>
@@ -55,6 +55,11 @@
                 Selection
               </a>
             </li>
+            <li>
+              <a class="nav--link__anchor" href="update.php">
+                Update
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -62,27 +67,28 @@
 
     <div class="container">
       <div class="row">
-        <form action="./selection.php" method="post" class="f1-form">
-        <label for="table">Enter table name: </label>
+        <form action="./update.php" method="post" class="f1-form">
+          Update engine manufacturer attributes - enter engine model key: <br>
           <input
             type="text"
-            id="table"
-            name="table"
+            id="model"
+            name="model"
             class="textbox"
             required
           />
-          <label for="attributes">Enter attribute names separated by commas: </label>
+          <br><br>Leave text box empty to preserve previous value
+        <label for="table">Enter new model: </label>
           <input
             type="text"
-            id="attributes"
-            name="attributes"
+            id="model_new"
+            name="model_new"
             class="textbox"
           />
-          <label for="conditions">Enter conditions: </label>
+          <label for="attributes">Enter new company name: </label>
           <input
             type="text"
-            id="conditions"
-            name="conditions"
+            id="company_name"
+            name="company_name"
             class="textbox"
           />
           <input type="submit" value="Submit" class="btn">
@@ -108,12 +114,24 @@
           if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
           }
+
+          if (!isset($_POST['model']))
+            exit;
           
           // construct query using input
-          if (!isset($_POST['attributes']) || !isset($_POST['table']) || !isset($_POST['conditions'])) {
-            exit;
+
+          $sql = "UPDATE engine_manufacturer SET ";
+          if (isset($_POST['model_new'])) {
+            $sql = $sql . "model = '" . $_POST['model_new'] . "'";
+            if (isset($_POST['company_name'])) {
+              $sql = $sql . ', ';
+            }
           }
-          $sql = 'SELECT ' . $_POST['attributes'] . ' FROM ' . $_POST['table'] . ' WHERE ' . $_POST['conditions'];
+          if (isset($_POST['company_name'])) {
+            $sql = $sql . "company_name = '" . $_POST['company_name'] . "'";
+          }
+
+          $sql = $sql . " WHERE model = '" . $_POST['model'] . "';";
 
           try {
             $result = $conn->query($sql);
@@ -121,24 +139,6 @@
             echo "Invalid input: " . $e->getMessage();
             exit;
           }
-
-          $attribute = $result -> fetch_fields();
-
-          echo "<table><tr>";
-          foreach ($attribute as $val) {
-            echo "<td>" . $val -> name . "</td>";
-          }
-          echo "</tr>";
-
-          while($row = mysqli_fetch_row($result)){ 
-              // mysqli_fetch_row fetches one row at a time, loop thru all rows of result
-              echo "<tr>";
-              foreach ($row as $element) {
-                echo "<td>" . $element . "</td>";
-              }
-              echo "</tr>";
-          }
-          echo "</table>";
 
           //closes our connection
           $conn->close();
