@@ -1683,3 +1683,7 @@ INSERT INTO Pays_For (team_name, team_year, sponsor_name) VALUES ('Red Bull Raci
 INSERT INTO Pays_For (team_name, team_year, sponsor_name) VALUES ('Mercedes', '2019', 'Tommy Hilfiger');
 INSERT INTO Pays_For (team_name, team_year, sponsor_name) VALUES ('Haas Ferrari', '2018', 'Richard Mille');
 INSERT INTO Pays_For (team_name, team_year, sponsor_name) VALUES ('McLaren Renault', '2020', 'Velo');
+
+INSERT INTO Race1 (p1, p2, p3, qp1, qp2, qp3, fastest_lap, circuit, year, safety_car_model) VALUES ('Nikita Mazepin', 'Max Verstappen', 'Valterri Bottas', 'Lewis Hamilton', 'Valtteri Bottas', 'Max Verstappen', 'Valterri Bottas', 'Spa', '2021', 'Mercedes SLS AMG');
+INSERT INTO Race1 (p1, p2, p3, qp1, qp2, qp3, fastest_lap, circuit, year, safety_car_model) VALUES ('Nikita Mazepin', 'Max Verstappen', 'Valterri Bottas', 'Lewis Hamilton', 'Valtteri Bottas', 'Max Verstappen', 'Valterri Bottas', 'Circuit de Monaco', '2021', 'Mercedes SLS AMG');
+INSERT INTO Race1 (p1, p2, p3, qp1, qp2, qp3, fastest_lap, circuit, year, safety_car_model) VALUES ('Nicholas Latifi', 'Max Verstappen', 'Valterri Bottas', 'Lewis Hamilton', 'Valtteri Bottas', 'Max Verstappen', 'Valterri Bottas', 'Sao Paulo', '2021', 'Mercedes SLS AMG');
