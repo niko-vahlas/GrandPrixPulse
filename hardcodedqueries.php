@@ -36,7 +36,7 @@
           <a class="personal--logo" href="index.html">F1 Records</a>
           <ul class="navbar--list">
             <li>
-              <a class="nav--link__anchor" href="delete.html">Delete</a>
+              <a class="nav--link__anchor" href="delete.php">Delete</a>
             </li>
             <li>
               <a class="nav--link__anchor" href="insert.html">Insert</a>
@@ -49,6 +49,19 @@
             <li>
               <a class="nav--link__anchor" href="projection.php">
                 Projection
+              </a>
+            </li>
+            <li>
+              <a class="nav--link__anchor" href="selection.php"> Selection </a>
+            </li>
+            <li>
+              <a class="nav--link__anchor" href="update.php">
+                Update
+              </a>
+            </li>
+            <li>
+              <a class="nav--link__anchor" href="join.php">
+                Join
               </a>
             </li>
           </ul>
