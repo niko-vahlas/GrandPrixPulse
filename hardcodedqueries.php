@@ -82,17 +82,17 @@
 <!--Aggregation with having-->
     <form method="post" class="f1-form">
       <input type="hidden" name="form_name" value="points_gap_form">
-        <label for="points_gap">Points gap between first and second:</label>
+        <label for="threshold">Find teams with historical points above:</label>
           <input
             type="text"
-            id="points_gap"
-            name="points_gap"
+            id="threshold"
+            name="threshold"
             class="textbox"
           />
           <div> 
           <?php if($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form_name'] == 'points_gap_form'){ require 'points_gap_form.php'; } ?>
         </div>
-        <input type="submit" value="Find dominant winners" class="btn">
+        <input type="submit" value="Find teams" class="btn">
     </form>
       <!--divison-->
       <form method="post" class="f1-form">

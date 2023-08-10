@@ -18,24 +18,22 @@
     }
 
 // Retrieve the points gap input
-$points_gap = mysqli_real_escape_string($conn, $_POST['points_gap']);
+$threshold = mysqli_real_escape_string($conn, $_POST['threshold']);
 
-$sql = "SELECT p1.year AS year,
-p1.name AS winner_name,
-p2.name AS loser_name,
-(p1.points - p2.points) AS gap
-FROM Team1 p1, Team1 p2
-WHERE p1.year = p2.year AND p1.points > p2.points
-GROUP BY p1.year
-HAVING gap = max(gap) AND gap > $points_gap;;";
+$sql = "SELECT t1.name AS team_name,
+SUM(t1.points) AS total_points
+FROM Team1 t1
+GROUP BY t1.name
+HAVING total_points > $threshold;
+";
 
 
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo "<table border='1'><tr><th>Year</th><th>Winning Team</th><th>Runner-Up</th><th>Points Gap</th></tr>";
+    echo "<table border='1'><tr><th>Team</th><th>Total Points</th></tr>";
     while ($row = $result->fetch_assoc()) {
-        echo "<tr><td>" . $row["year"] . "</td><td>" . $row["winner_name"] . "</td><td>" . $row["loser_name"] . "</td><td>" . $row["gap"] . "</td></tr>";
+        echo "<tr><td>" . $row["team_name"] . "</td><td>" . $row["total_points"] . "</td></tr>";
     }
     echo "</table>";
 } else {
