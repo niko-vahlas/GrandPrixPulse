@@ -91,7 +91,7 @@ CREATE TABLE Race1 (
 	qp1 CHAR(50),
 	qp2 CHAR(50),
 	qp3 CHAR(50),
-	fastest_lap CHAR(8),
+	fastest_lap CHAR(50),
 	circuit CHAR(50),
 	year INTEGER,
 	safety_car_model CHAR(50),
