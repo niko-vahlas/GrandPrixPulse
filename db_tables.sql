@@ -1687,3 +1687,15 @@ INSERT INTO Pays_For (team_name, team_year, sponsor_name) VALUES ('McLaren Renau
 INSERT INTO Race1 (p1, p2, p3, qp1, qp2, qp3, fastest_lap, circuit, year, safety_car_model) VALUES ('Nikita Mazepin', 'Max Verstappen', 'Valterri Bottas', 'Lewis Hamilton', 'Valtteri Bottas', 'Max Verstappen', 'Valterri Bottas', 'Spa', '2021', 'Mercedes SLS AMG');
 INSERT INTO Race1 (p1, p2, p3, qp1, qp2, qp3, fastest_lap, circuit, year, safety_car_model) VALUES ('Nikita Mazepin', 'Max Verstappen', 'Valterri Bottas', 'Lewis Hamilton', 'Valtteri Bottas', 'Max Verstappen', 'Valterri Bottas', 'Circuit de Monaco', '2021', 'Mercedes SLS AMG');
 INSERT INTO Race1 (p1, p2, p3, qp1, qp2, qp3, fastest_lap, circuit, year, safety_car_model) VALUES ('Nicholas Latifi', 'Max Verstappen', 'Valterri Bottas', 'Lewis Hamilton', 'Valtteri Bottas', 'Max Verstappen', 'Valterri Bottas', 'Sao Paulo', '2021', 'Mercedes SLS AMG');
+
+INSERT INTO Team1 (name, year, points, car_model, principal_name) VALUES
+('Mercedes', 2000, 100, 'W10', 'Guenther Steiner'),
+('Mercedes', 2001, 110, 'W10', 'Guenther Steiner'),
+('Mercedes', 2002, 120, 'W10', 'Guenther Steiner'),
+('Mercedes', 2003, 130, 'W10', 'Guenther Steiner'),
+('Mercedes', 2004, 140, 'W10', 'Guenther Steiner'),
+('Mercedes', 2005, 150, 'W10', 'Guenther Steiner'),
+('Mercedes', 2006, 160, 'W10', 'Guenther Steiner'),
+('Mercedes', 2007, 170, 'W10', 'Guenther Steiner'),
+('Mercedes', 2008, 180, 'W10', 'Guenther Steiner'),
+('Mercedes', 2009, 190, 'W10', 'Guenther Steiner');
