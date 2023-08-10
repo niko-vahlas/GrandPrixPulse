@@ -63,7 +63,7 @@ if ($conn->connect_error) {
               <a class="nav--link__anchor" href="delete.php">Delete</a>
             </li>
             <li>
-              <a class="nav--link__anchor" href="insert.html">Insert</a>
+              <a class="nav--link__anchor" href="insert.php">Insert</a>
             </li>
             <li>
               <a class="nav--link__anchor" href="hardcodedqueries.php"
