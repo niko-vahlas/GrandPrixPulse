@@ -18,7 +18,7 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT team_name, COUNT(driver_name) as driver_count FROM Drives_For GROUP BY team_name";
+    $sql = "SELECT team_name, COUNT(DISTINCT driver_name) as driver_count FROM Drives_For GROUP BY team_name";
     $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
