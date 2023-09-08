@@ -36,5 +36,5 @@ Functionality:
 We will use PHP/MySQL for the backend and HTML/CSS for the frontend.
 
 ### ER Diagram
+![304project drawio](https://github.com/niko-vahlas/GrandPrixPulse/assets/111840954/9deed4ca-4420-428f-88ca-1a2c80cfe45e)
 
-![image](https://media.github.students.cs.ubc.ca/user/17469/files/a37ee999-fbd5-41b0-ad70-cbc759dad18b)
